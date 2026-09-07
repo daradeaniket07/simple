@@ -192,7 +192,9 @@ button, input, textarea { font: inherit; }
   max-width: 500px;
   font-size: clamp(4.2rem, 6.2vw, 6.8rem);
   line-height: 0.88;
-  letter-spacing: -0.095em;
+  letter-spacing: -0.075em;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
 }
 
 .home-page .hero-copy h1 span {
