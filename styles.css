@@ -118,6 +118,26 @@ button, input, textarea { font: inherit; }
   border-radius: 2px;
 }
 
+.header-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 138px;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--white);
+  color: #141414;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.header-cv:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+}
+
 .hero,
 .brand-section,
 .works-section,
@@ -138,6 +158,80 @@ button, input, textarea { font: inherit; }
   min-height: 740px;
   position: relative;
   padding-top: 20px;
+}
+
+.home-page .site-header {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-top: 24px;
+  background: transparent;
+  border: 0;
+}
+
+.home-page .menu-button {
+  display: none;
+}
+
+.home-page .hero {
+  width: min(100%, 1140px);
+  min-height: calc(100vh - 96px);
+  margin: 0 auto;
+  grid-template-columns: minmax(440px, 0.86fr) minmax(520px, 1.14fr);
+  gap: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.home-page .hero-copy {
+  align-self: center;
+  padding: 40px 28px 60px 0;
+  z-index: 4;
+}
+
+.home-page .hero-copy h1 {
+  max-width: 500px;
+  font-size: clamp(4.2rem, 6.2vw, 6.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.095em;
+}
+
+.home-page .hero-copy h1 span {
+  margin-left: 2px;
+}
+
+.home-page .lead {
+  max-width: 540px;
+  margin-top: 34px;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.42;
+}
+
+.home-page .hero-visual {
+  height: auto;
+  min-height: calc(100vh - 96px);
+  margin-right: -1px;
+}
+
+.home-page .hero-image-wrap {
+  border-radius: 28px 0 0 0;
+}
+
+.home-page .hero-image-wrap::before {
+  background: linear-gradient(90deg, rgba(0,0,0,0.44), rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.16));
+}
+
+.home-page .hero-image-wrap img {
+  transform: scale(1.03);
+  filter: grayscale(1) brightness(0.62) contrast(1.12);
+}
+
+.home-page .showreel-badge {
+  left: 34px;
+  top: 32px;
+}
+
+.home-page .badge-cta {
+  display: none;
 }
 
 .hero-copy {
