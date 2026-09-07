@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        entry.target.querySelectorAll('video').forEach((video) => {
+          video.play().catch(() => {});
+        });
+      } else {
+        entry.target.querySelectorAll('video').forEach((video) => video.pause());
       }
     });
   }, { threshold: 0.12 });
